@@ -23,14 +23,10 @@ func == (left:TicTacToeGame, right:TicTacToeGame) ->Bool{
 //Struct so it is pass by copy
 struct TicTacToeGame {
     var turn:String = "X"
-    private var board:[String] = [String].init(count: 9, repeatedValue: "")
+    var board:[String] = [String].init(count: 9, repeatedValue: "")
     
     //publically read only
-    var gameBoard:[String]{
-        get{
-            return board
-        }
-    }
+    
     var winner:String?
     var gameOver = false
     
@@ -76,7 +72,7 @@ struct TicTacToeGame {
             if gameOver{
                 if let win = winner{
                     var score = 15
-                    for spot in gameBoard{
+                    for spot in board{
                         if !spot.isEmpty {
                             score = score - 1
                         }

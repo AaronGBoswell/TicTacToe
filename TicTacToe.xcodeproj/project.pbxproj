@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD509A9D1CF7C56000A8DE8D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD509A9C1CF7C56000A8DE8D /* GameKit.framework */; };
+		BD509A9F1CF7CBF200A8DE8D /* GameCenterWaitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD509A9E1CF7CBF200A8DE8D /* GameCenterWaitViewController.swift */; };
 		BD5DEB691CEE689F0005BFE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DEB681CEE689F0005BFE2 /* AppDelegate.swift */; };
 		BD5DEB6B1CEE689F0005BFE2 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DEB6A1CEE689F0005BFE2 /* TicTacToeViewController.swift */; };
 		BD5DEB6E1CEE689F0005BFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5DEB6C1CEE689F0005BFE2 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD509A9C1CF7C56000A8DE8D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		BD509A9E1CF7CBF200A8DE8D /* GameCenterWaitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterWaitViewController.swift; sourceTree = "<group>"; };
 		BD5DEB651CEE689F0005BFE2 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5DEB681CEE689F0005BFE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD5DEB6A1CEE689F0005BFE2 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD509A9D1CF7C56000A8DE8D /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 		BD5DEB5C1CEE689F0005BFE2 = {
 			isa = PBXGroup;
 			children = (
+				BD509A9C1CF7C56000A8DE8D /* GameKit.framework */,
 				BD5DEB671CEE689F0005BFE2 /* TicTacToe */,
 				BD5DEB661CEE689F0005BFE2 /* Products */,
 			);
@@ -62,6 +68,7 @@
 				BD5DEB6A1CEE689F0005BFE2 /* TicTacToeViewController.swift */,
 				BD5DEB7A1CEE68B80005BFE2 /* TicTacToeGame.swift */,
 				BD5DEB6C1CEE689F0005BFE2 /* Main.storyboard */,
+				BD509A9E1CF7CBF200A8DE8D /* GameCenterWaitViewController.swift */,
 				BD5DEB7C1CF12E660005BFE2 /* StartPageViewController.swift */,
 				BD5DEB6F1CEE689F0005BFE2 /* Assets.xcassets */,
 				BD5DEB711CEE689F0005BFE2 /* LaunchScreen.storyboard */,
@@ -102,6 +109,12 @@
 				TargetAttributes = {
 					BD5DEB641CEE689F0005BFE2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 27RHNLCLG4;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -144,6 +157,7 @@
 				BD5DEB7B1CEE68B80005BFE2 /* TicTacToeGame.swift in Sources */,
 				BD5DEB6B1CEE689F0005BFE2 /* TicTacToeViewController.swift in Sources */,
 				BD5DEB7D1CF12E660005BFE2 /* StartPageViewController.swift in Sources */,
+				BD509A9F1CF7CBF200A8DE8D /* GameCenterWaitViewController.swift in Sources */,
 				BD5DEB691CEE689F0005BFE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +273,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = company.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = "TicTacToe-AaronBoswell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -270,7 +284,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicTacToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = company.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = "TicTacToe-AaronBoswell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -294,6 +308,7 @@
 				BD5DEB791CEE689F0005BFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

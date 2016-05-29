@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QaH-jE-MzO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QaH-jE-MzO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,10 +38,19 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="friend" id="b7v-tm-ZWY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-Pi-hu2">
+                                <rect key="frame" x="224" y="361" width="152" height="30"/>
+                                <state key="normal" title="Play with GameCenter"/>
+                                <connections>
+                                    <action selector="startGCGame:" destination="s7F-nJ-EN1" eventType="touchUpInside" id="N1k-iU-jkT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xP5-3C-HEu" firstAttribute="top" secondItem="Rzo-oo-Oeb" secondAttribute="bottom" constant="8" id="Kek-EE-gLS"/>
+                            <constraint firstItem="YdH-Pi-hu2" firstAttribute="top" secondItem="xP5-3C-HEu" secondAttribute="bottom" constant="8" id="Ovo-k7-FSb"/>
+                            <constraint firstItem="YdH-Pi-hu2" firstAttribute="centerX" secondItem="mZV-zx-Lje" secondAttribute="centerX" id="T2X-32-YDI"/>
                             <constraint firstItem="y3g-kz-Oim" firstAttribute="centerX" secondItem="mZV-zx-Lje" secondAttribute="centerX" id="fjf-Un-9Jh"/>
                             <constraint firstItem="Rzo-oo-Oeb" firstAttribute="centerY" secondItem="mZV-zx-Lje" secondAttribute="centerY" id="l4R-xb-hbX"/>
                             <constraint firstItem="Rzo-oo-Oeb" firstAttribute="centerX" secondItem="mZV-zx-Lje" secondAttribute="centerX" id="pLS-93-QRQ"/>
@@ -50,10 +59,41 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rYV-nD-8t4"/>
+                    <connections>
+                        <outlet property="gameCenterButton" destination="YdH-Pi-hu2" id="0RM-VM-taD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gamecenter" id="K9U-KG-KYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSl-0C-gKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="623" y="702"/>
+        </scene>
+        <!--Game Center Wait View Controller-->
+        <scene sceneID="0uJ-Gn-2pl">
+            <objects>
+                <viewController id="4Me-rj-8gJ" customClass="GameCenterWaitViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="prA-cg-2GM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sxg-aB-LdX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I23-bd-vvF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WP3-4E-2Ff">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WP3-4E-2Ff" firstAttribute="centerY" secondItem="I23-bd-vvF" secondAttribute="centerY" id="wDX-HM-nPr"/>
+                            <constraint firstItem="WP3-4E-2Ff" firstAttribute="centerX" secondItem="I23-bd-vvF" secondAttribute="centerX" id="xfG-fd-VqT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ee5-X8-wie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="1434"/>
         </scene>
         <!--Game-->
         <scene sceneID="tne-QT-ifu">
@@ -268,6 +308,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MTU-Id-HAR"/>
+        <segue reference="K9U-KG-KYb"/>
     </inferredMetricsTieBreakers>
 </document>
